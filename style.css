@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #131417;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    box-sizing: border-box;
+}
+.start-part{
+    background: #131417;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+}
+.start-part h1{
+    margin: 0;
+    background-image: linear-gradient(to right,#47cf73, #26c5c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+}
+.lose button ,.start-part button{
+    width: 220px;
+    color: #000;
+    background: #47cf73;
+    font-size: 25px;
+    outline: none;
+    border:0;
+    border-radius: 5px;
+    padding: 15px 0;
+    transition: 0.5s ease-out;
+}   
+.lose button:hover ,.start-part button:hover {
+    background: #2fb45a;
+}
+.start-part p{
+    color: #fff;
+    margin-top: 35px;
+}

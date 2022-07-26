@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <!-- start part -->
+    <div class="start-part">
+        <h1>Hangman</h1>
+        <button id="start">Start</button>
+        <button id="about">About Game</button>
+        <p>By Ruben Vardanyan 2022</p>
+    </div>
+    <!-- game part -->
+    <div class="main">
+        <div class="lose">
+            <h1>Game Over</h1>
+            <button class="restart">Play Again</button>
+            <button id="quit">Quit</button>
+        </div>  
+        <div class="box">
+            <div class="menu">
+                <button class="restart">Restart</button>
+                <button id="help">Help</button>
+                <button id="quit">Quit</button>
+            </div>
+            <div class="screen">
+                <div class="side-bar">
+                    <span><i class="fa-solid fa-heart"></i> <span id="life">7</span> </span>
+                    <span><i class="fa-solid fa-fire"></i> <span id="score">0</span></span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="box">
+                <h2 class="question">How?</h2>
+                <h2 class="word">_______</h2>
+                <div class="letters"></div>
+        </div>
+    </div>
+    <script src="Hangman.js"></script>
+    <script src="setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+.main{
+    overflow: hidden;
+    width: 80%;
+    background: #2b2c2f;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+/* I made  border with linear-gradient */
+.main::after{
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background:  linear-gradient(to right,rgba(71, 207, 115,0.8), rgba(38, 197, 198,0.8));
+    width: calc( 100% + 4px);
+    height: calc( 100% + 4px);
+    border-radius: 5px;
+    z-index: -1;
+}
+.lose{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+    transition: 0.5s ease-in-out;
+    transform: translateY(-100%);
+}
+.lose h1{
+    color :#000;
+    font-size: 55px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+/* box 1 start */
+.menu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:5px;
+}
+.menu button{
+    background: #47cf73;
+    color: #000;
+    font-size: 25px;
+    outline: none;
+    border:0;
+    border-radius: 5px;
+    padding: 7px 0;
+    transition: 0.5s ease-out;
+}
+.menu button:last-child{
+    background: #2c303a;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.menu button:hover{
+    background: #2fb45a;
+}
+.menu button:last-child:hover{
+    background: #3d404f;
+}
+.screen{
+    position: relative;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 100%;
+    height: 500px;
+    border: 2px solid rgba(255, 255, 255,0.2);
+}
+.side-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color:rgba(38, 197, 198,1);
+    width: max-content;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    font-size: 28px;
+    padding: 0 5px ;
+}
+
+/* < */
+/* box 2 start */
+
+.question{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+.word{
+   
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #fff;
+}
+.letters{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap:10px;
+}
+.letters button{
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border: 0 ;
+    font-weight: 500;
+    background: #47cf73;
+    border-radius: 50%;
+    transition: 0.5s ease-out;
+}
+.letters button:hover{
+    background: #2fb45a;
+}
+.letters button:disabled{
+    background: #3d404f;
+    color:#777;
+    transform: scale(0.8);
+}
