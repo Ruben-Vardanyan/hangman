@@ -17,10 +17,11 @@
     body{
         width: 100%;
         height: 100%;
+        
     }
     .main{
         
-        height: 100vh;
+        height: 100%;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
     .main::after{
@@ -50,8 +51,10 @@
 }
 /*phone 180-767px*/
 @media only screen and (min-device-width : 180px) and (max-device-width :  767px) and (orientation : portrait) { 
-    
     .main{
         height: 100%;
+    }
+    .box:last-child{
+        padding:0 0 15vh 0;
     }
 }
