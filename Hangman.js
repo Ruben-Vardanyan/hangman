@@ -19,7 +19,7 @@ class Hangman{
             ["THE HIGHEST MOUNTAIN IN ARMENIA",   "ARAGATS"],
             ["POPULAR SPORT",           "FOOTBALL"],
             ["POPULAR SPORT",           "RUGBY"],
-            ["WEB PROGRAMMING LANGUAGE", "JAVASCIPT"],
+            ["WEB PROGRAMMING LANGUAGE", "JAVASCRIPT"],
             ["WEB PROGRAMMING LANGUAGE", "HTML"],
             ["PROGRAMMING LANGUAGE", "PYTHON"],
             ["PROGRAMMING LANGUAGE", "RUBY"],
