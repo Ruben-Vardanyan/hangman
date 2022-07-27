@@ -1,11 +1,13 @@
 class Hangman{
-    constructor(lifeA,scoreA,questionA,wordA,loserA,buttonsA){
+    constructor(lifeA,scoreA,questionA,wordA,loserA,buttonsA,drawManA){
         this.lifeScreen = lifeA;
         this.scoreScreen = scoreA;
         this.questionScreen = questionA;
         this.wordScreen = wordA;
         this.loseScreen = loserA;
         this.buttonsScreen = buttonsA;
+        this.drawManScreen = drawManA;
+
 
         this.oldPassword = "";
         this.oldWord = "";
@@ -13,14 +15,30 @@ class Hangman{
         this.life = 7;
         this.score = 0;
         this.passwords = [
-            ["WHICH MOUNTAIN WE LOVE",   "ARARAT"],
+            ["THE LARGEST OCEAN",   "PACIFIC"],
+            ["THE HIGHEST MOUNTAIN IN ARMENIA",   "ARAGATS"],
             ["POPULAR SPORT",           "FOOTBALL"],
+            ["POPULAR SPORT",           "RUGBY"],
             ["WEB PROGRAMMING LANGUAGE", "JAVASCIPT"],
-            ["CITY IN ARMENIA ", "KAPAN"]
+            ["WEB PROGRAMMING LANGUAGE", "HTML"],
+            ["PROGRAMMING LANGUAGE", "PYTHON"],
+            ["PROGRAMMING LANGUAGE", "RUBY"],
+            ["PROGRAMMING LANGUAGE", "ANDROID"],
+            ["CITY IN ARMENIA", "KAPAN"],
+            ["CITY IN ARMENIA", "STEPANAVAN"],
+            ["CITY IN ARMENIA", "VANADZOR"],
+            ["CITY IN ARMENIA", "GYUMRI"],
+            ["CITY IN ARMENIA", "YEREVAN"],
+            ["FAMOUS ROBOT", "TERMINATOR"],
+            ["SWEET LAKE IN ARMENIA", "SEVAN"],
+            ["CAPITAL CITY OF BRITAIN", "LONDON"],
+            ["CAPITAL CITY OF SPAIN", "MADRID"],
+            ["CAPITAL CITY OF FRANCE", "PARIS"],
         ]
         this.isCont = true;
     }
     restart(){
+        this.loseScreen.style.transitionDelay = "0s";
         this.loseScreen.style.transform = "translateY(-100%)";
         this.oldWord = this.oldPassword;
         this.oldPassword = "";
@@ -32,10 +50,22 @@ class Hangman{
         this.display();
         this.isCont = true;
     }
+    quit(){
+        this.loseScreen.style.transitionDelay = "0s";
+        this.loseScreen.style.transform = "translateY(-100%)";
+        this.oldWord = "";
+        this.oldPassword = "";
+        this.wordCheck = "";
+        this.life = 7;
+        this.score = 0;
+        this.isCont = false;
+        this.buttonsScreen.forEach((button) => button.removeAttribute("disabled"))
+    }
     randNum() {
         return Math.floor(Math.random() * (this.passwords.length - 0) + 0);
     }
     start(){
+        this.isCont = true;
         do{
             let theNum = this.randNum();
             this.questionScreen.textContent = this.passwords[theNum][0]; 
@@ -71,6 +101,7 @@ class Hangman{
         }
     }
     lose(){
+        this.loseScreen.style.transitionDelay = "1s";
         this.loseScreen.style.transform = "translateY(0%)";
         this.lifeScreen.textContent = "0";
         this.isCont = false;
@@ -86,6 +117,7 @@ class Hangman{
         this.lifeScreen.textContent = this.life;
         this.wordScreen.textContent = this.oldPassword;
         this.scoreScreen.textContent = this.score;
+        this.drawManScreen.src = `imgs/l${this.life}.svg`
     }
     
 }

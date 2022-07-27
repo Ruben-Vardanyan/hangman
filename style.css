@@ -1,3 +1,8 @@
+html{
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	 height: -webkit-fill-available;
+}
 body{
     margin: 0;
     padding: 0;
@@ -8,9 +13,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 div{
     box-sizing: border-box;
+}
+button{
+    cursor: pointer;
 }
 .start-part{
     background: #131417;
@@ -21,14 +31,34 @@ div{
     align-items: center;
     gap:25px;
 }
-.start-part h1{
+.logo{
+    width: 120px;
+    border-radius: 50%;
+    animation: anim 2s linear infinite;
+}
+@keyframes anim{
+    0%{
+        box-shadow: 0 5px 10px  #47cf73,
+                0 -5px 10px  #26c5c6;
+    }
+    50%{
+        box-shadow: 0 5px 20px  #26c5c6,
+                0 -5px 20px  #47cf73;
+    }
+    100%{
+        box-shadow: 0 5px 10px  #47cf73,
+                0 -5px 10px  #26c5c6;
+    }
+}
+
+.start-part h1 , .about-part h1{
     margin: 0;
     background-image: linear-gradient(to right,#47cf73, #26c5c6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 45px;
 }
-.lose button ,.start-part button{
+.lose button ,.start-part button , .about-part button{
     width: 220px;
     color: #000;
     background: #47cf73;
@@ -39,10 +69,54 @@ div{
     padding: 15px 0;
     transition: 0.5s ease-out;
 }   
-.lose button:hover ,.start-part button:hover {
+.lose button:hover ,.start-part button:hover , .about-part button:hover {
     background: #2fb45a;
 }
 .start-part p{
     color: #fff;
     margin-top: 35px;
+    
+}
+
+/* about-part */
+.about-part{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #131417;
+    border-left:5px solid #26c5c6;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:0px;
+    color:#fff;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+.hideAbout{
+    transform: translateX(0%);
+}
+.about-part p{
+   margin: 5px 0;
+}
+.about-part p.lastP{
+    margin-bottom: 20px;
+ }
+.about-part a{
+    font-size: 20px;
+    color:#26c5c6;
+    font-weight: 500;
+    transition: 0.5s ease-out;
+}
+.logo2{
+    
+    height: 25px;
+}
+.about-part a:hover{
+    font-size: 20px;
+    color:#2a9292;
+    font-weight: 500;
 }

@@ -1,10 +1,50 @@
-@media only screen and (max-width: 600px){
+
+@media only screen and (max-width: 1000px){
     .main{
+        background: #131417;
         margin:0;
         width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    .screen{
+        height: 300px;
+    }
+    #drawMan{
+        height: 80%;
+    }
+}
+@media only screen and (max-width: 600px){
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    .main{
+        
+        height: 100vh;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
     .main::after{
         display: none;
+    }
+    .screen{
+        height: 250px;
+    }
+    .question{
+        font-size: 20px;
+        margin: 0;
+    }
+    .letters button{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .lose h1{
+        font-size:25px;
+        letter-spacing: 10px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .box{
+        padding:20px 10px;
     }
 }
