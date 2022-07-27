@@ -1,5 +1,5 @@
 html{
-    overflow: hidden;
+    /* overflow: hidden; */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	 height: -webkit-fill-available;
 }
@@ -7,7 +7,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     background: #131417;
     position: relative;
     display: flex;

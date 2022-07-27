@@ -51,10 +51,47 @@
 }
 /*phone 180-767px*/
 @media only screen and (min-device-width : 180px) and (max-device-width :  767px) and (orientation : portrait) { 
+    html{
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    body{
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
+        align-items: flex-start;
+      
+    }
+    .screen{
+        height: 30vh;
+    }
     .main{
         height: 100%;
+       
+    }
+    
+    .about-part{
+        overflow-y: auto;
+    }
+    .about-part img{
+        display: block;
+        margin-top: min(7%,5vh);
+    }
+    .lastP img{
+        margin: 0;
+        display: inline;
+    }
+    .word{
+        margin: 15px 0;
+    }
+    .box{
+        padding:5px 10px !important;
+        justify-content: center;
     }
     .box:last-child{
-        padding:0 0 15vh 0;
+        padding:0 10px 15vh 10px !important;
+     
     }
+    
+    
 }
